@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>System Health Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1e2e;
+            color: #cdd6f4;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        h1 { color: #89b4fa; margin-bottom: 32px; }
+        .metric {
+            background: #313244;
+            padding: 20px;
+            margin: 12px 0;
+            border-radius: 8px;
+        }
+        .metric strong { display: block; margin-bottom: 8px; }
+        .bar {
+            background: #45475a;
+            border-radius: 4px;
+            height: 20px;
+        }
+        .fill {
+            background: #89b4fa;
+            height: 20px;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+        .refresh {
+            margin-top: 32px;
+            color: #6c7086;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>🖥 System Health Dashboard</h1>
+
+    <div class="metric">
+        <strong>CPU Usage: {{ metrics.cpu }}%</strong>
+        <div class="bar">
+            <div class="fill" style="width: {{ metrics.cpu }}%"></div>
+        </div>
+    </div>
+
+    <div class="metric">
+        <strong>RAM Usage: {{ metrics.ram }}%</strong>
+        <div class="bar">
+            <div class="fill" style="width: {{ metrics.ram }}%"></div>
+        </div>
+    </div>
+
+    <div class="metric">
+        <strong>Disk Usage: {{ metrics.disk }}%</strong>
+        <div class="bar">
+            <div class="fill" style="width: {{ metrics.disk }}%"></div>
+        </div>
+    </div>
+
+    <p class="refresh">Refresh the page to update stats.</p>
+</body>
+</html>
