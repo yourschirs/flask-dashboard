@@ -7,7 +7,13 @@ services:
     restart: unless-stopped
     expose:
       - "5000"
-
+    environment:
+      - DB_HOST=postgres
+      - DB_NAME=metricsdb
+      - DB_USER=christie
+      - DB_PASSWORD=securepassword
+    depends_on:
+      - postgres
 
   nginx:
     image: nginx:alpine
@@ -18,4 +24,18 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
     depends_on:
-    - flask
+      - flask
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres-db
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=metricsdb
+      - POSTGRES_USER=christie
+      - POSTGRES_PASSWORD=securepassword
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
