@@ -54,6 +54,14 @@ flask-dashboard/
 | DB_USER | Database user |
 | DB_PASSWORD | Database password |
 
+## What I Learned
+- Writing a Python Flask web application from scratch
+- Containerising a multi-service app with Docker Compose
+- Configuring Nginx as a reverse proxy
+- Connecting Flask to PostgreSQL using psycopg2
+- Managing container networking and environment variables
+- Debugging container startup race conditions
+
 ## Part of
 [Homelab DevOps Portfolio](https://github.com/yourusername) —
 a hands-on Cloud/DevOps learning project built on Proxmox.
