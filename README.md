@@ -77,3 +77,16 @@ a hands-on Cloud/DevOps learning project built on Proxmox.
 - Ubuntu Server 22.04 LTS
 - Publicly accessible via EC2 public IP
 - Same Docker Compose stack as local deployment
+
+## Backups
+
+### S3 Log Backup
+- PostgreSQL metrics table dumped hourly via cron
+- Backup script uses AWS CLI to upload to S3
+- Stored in `s3://your-bucket-name/backups/`
+- Backup log stored at `/home/ubuntu/backup.log`
+
+### How to Run Manually
+```bash
+bash backup.sh
+```
