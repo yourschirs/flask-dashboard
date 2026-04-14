@@ -65,3 +65,15 @@ flask-dashboard/
 ## Part of
 [Homelab DevOps Portfolio](https://github.com/yourusername) —
 a hands-on Cloud/DevOps learning project built on Proxmox.
+
+## Deployment
+
+### Local (Proxmox Homelab)
+- Runs on Ubuntu Server 22.04 VM
+- Accessible on home network via `http://<vm-ip>`
+
+### Cloud (AWS EC2)
+- Deployed to t3.micro EC2 instance in EU (London) region
+- Ubuntu Server 22.04 LTS
+- Publicly accessible via EC2 public IP
+- Same Docker Compose stack as local deployment
