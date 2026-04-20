@@ -63,7 +63,7 @@ flask-dashboard/
 - Debugging container startup race conditions
 
 ## Part of
-[Homelab DevOps Portfolio](https://github.com/yourusername) —
+[Homelab DevOps Portfolio](https://christiethankachan.co.uk) —
 a hands-on Cloud/DevOps learning project built on Proxmox.
 
 ## Deployment
